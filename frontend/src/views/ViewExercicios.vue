@@ -1,42 +1,43 @@
 <template>
-      <v-card>
+  <v-main>
+    <v-container>
+      <v-row >
         <v-card-title>
           Seus Exercicios
         </v-card-title>
-        <v-row>
-          <v-spacer></v-spacer>
-          <v-btn @click="dialog = true" text="Adicionar Exercicio" prepend-icon="mdi-dumbbell"></v-btn>
-          <v-dialog v-model="dialog" max-width="600">
-            <v-card prepend-icon="mdi-dumbbell" title="Adicionar Exercicio">
-              <v-row p>
-                <v-text-field clearable label="Nome" required v-model="exercicio.nome"></v-text-field>
-              </v-row>
-              <v-row>
-                <v-text-field clearable label="Repeticoes" required v-model="exercicio.rep" suffix="reps"></v-text-field>
-                <v-text-field clearable label="Carga" required v-model="exercicio.kg" suffix="Kg"></v-text-field>
-              </v-row>
-
-              <v-divider></v-divider>
-
-              <v-card-actions>
-                <v-spacer></v-spacer>
-
-                <v-btn text="Cancelar" variant="plain" @click="clearExercicio"></v-btn>
-
-                <v-btn color="primary" text="Adicionar" variant="tonal" @click="addExercicio"></v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-        </v-row>
-        
-        <v-table>
+        <v-spacer></v-spacer>
+        <v-btn @click="dialog = true" text="Adicionar Exercicio" prepend-icon="mdi-dumbbell" class="my-auto"></v-btn>
+      </v-row>
+      <div class="pa-4 text-center">
+        <v-dialog v-model="dialog" max-width="600">
+          <v-card prepend-icon="mdi-dumbbell" title="Adicionar Exercicio">
+            <v-card-text>
+            <v-row dense>
+              <v-col cols="12" sm="12"><v-text-field clearable label="Nome" required v-model="exercicio.nome" variant="outlined"></v-text-field></v-col>
+              <v-col cols="12" sm="6"><v-text-field clearable label="Repeticoes" required v-model="exercicio.rep" suffix="reps" variant="outlined"></v-text-field></v-col>
+              <v-col cols="12" sm="6"><v-text-field clearable label="Carga" required v-model="exercicio.kg" suffix="Kg" variant="outlined"></v-text-field></v-col>
+            </v-row>
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn text="Cancelar" variant="plain" @click="clearExercicio"></v-btn>
+              <v-btn color="primary" text="Adicionar" variant="tonal" @click="addExercicio"></v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </div>
+    </v-container>
+    <v-container>
+      <v-card>
+        <v-table fixed-header class="mx-auto">
           <thead>
             <tr>
               <th class="text-left">Id</th>
               <th class="text-left">Nome</th>
               <th class="text-left">Repeticoes</th>
               <th class="text-left">Carga</th>
-              <th class="text-center">Acoes</th>
+              <th class="text-left">Acoes</th>
             </tr>
           </thead>
           <tbody>
@@ -59,6 +60,8 @@
           </tbody>
         </v-table>
       </v-card>
+    </v-container>
+  </v-main>
 </template>
 <script>
 
