@@ -1,4 +1,7 @@
 # projeto-npi
+## Documento de Requisitos
+
+## Descrição
 um logbook para armazenar as cargas e repetições de seus exercicios
 ## atores:
 * usuario
