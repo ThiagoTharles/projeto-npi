@@ -1,6 +1,6 @@
 # projeto-npi
 ## Documento de Requisitos
-
+[Clique aqui para visualizar o documento PDF](https://github.com/ThiagoTharles/projeto-npi/blob/main/Requisitos_NPI.pdf)
 ## Descrição
 um logbook para armazenar as cargas e repetições de seus exercicios
 ## atores:
